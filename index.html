@@ -605,6 +605,163 @@ textarea {
     align-self: center;
   }
 }
+
+  /* PROJECT SECTION */
+.project-section {
+  background: #FFF8EF;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.project-text {
+  flex: 1;
+}
+
+.project-name {
+  font-size: 44px;
+  margin: 0 0 6px;
+  color: #006E79;
+  letter-spacing: 1px;
+}
+
+.project-text h3 {
+  margin: 0 0 20px;
+  color: #3A1F14;
+  font-size: 18px;
+}
+
+.project-text p {
+  max-width: 500px;
+  line-height: 1.9;
+  color: #5B3B2D;
+}
+
+.features-title {
+  margin-top: 26px;
+  margin-bottom: 14px;
+  letter-spacing: 3px;
+  font-size: 13px;
+  color: #6B4A3A;
+  font-weight: 600;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  margin-bottom: 12px;
+  color: #5B3B2D;
+}
+
+.features-list li::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #8B5E3C;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #006E79;
+}
+
+.project-screens {
+  flex: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.screen {
+  width: 31%;
+  max-width: 180px;
+  border-radius: 26px;
+  box-shadow: 0 18px 40px rgba(58, 31, 20, 0.18);
+}
+
+.screen-two {
+  transform: scale(1.12);
+  z-index: 2;
+}
+
+.project-info-card {
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 780px;
+  background: #F1E3D3;
+  border-radius: 26px;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(58, 31, 20, 0.08);
+}
+
+.project-info-box {
+  text-align: center;
+  padding: 10px 18px;
+  border-right: 1px solid #D7C3AE;
+}
+
+.project-info-box:last-child {
+  border-right: none;
+}
+
+.project-info-box h3 {
+  margin: 4px 0;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #6B4A3A;
+}
+
+.project-info-box span {
+  font-size: 13px;
+  color: #5B3B2D;
+}
+
+@media (max-width: 850px) {
+  .project-content {
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .project-name {
+    font-size: 38px;
+  }
+
+  .project-screens {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .screen {
+    width: 32%;
+    border-radius: 18px;
+  }
+
+  .project-info-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .project-info-box {
+    border-right: none;
+    border-bottom: 1px solid #D7C3AE;
+    padding-bottom: 16px;
+  }
+
+  .project-info-box:last-child {
+    border-bottom: none;
+  }
+}
 </style>
 </head>
 
@@ -718,6 +875,62 @@ textarea {
 
   </div>
 
+</section>
+
+  <section class="project-section">
+  <div class="about-header">
+    <span class="about-number">03</span>
+    <span class="about-title">GRADUATION PROJECT</span>
+    <span class="about-line"></span>
+  </div>
+
+  <div class="project-content">
+    <div class="project-text">
+      <h2 class="project-name">CAMPRESSO</h2>
+      <h3>Smart Campus Café Ordering App</h3>
+
+      <p>
+        Campresso is a mobile application designed to improve the campus café experience
+        by allowing students and staff to order easily, track their orders, and reduce waiting time.
+      </p>
+
+      <div class="features-title">KEY FEATURES</div>
+
+      <ul class="features-list">
+        <li>Easy café ordering</li>
+        <li>Order tracking</li>
+        <li>Crowd prediction</li>
+        <li>Campus delivery support</li>
+        <li>Café staff dashboard</li>
+      </ul>
+    </div>
+
+    <div class="project-screens">
+      <img src="screen1.png" alt="Campresso Screen 1" class="screen screen-one">
+      <img src="screen2.png" alt="Campresso Screen 2" class="screen screen-two">
+      <img src="screen3.png" alt="Campresso Screen 3" class="screen screen-three">
+    </div>
+  </div>
+
+  <div class="project-info-card">
+    <div class="project-info-box">
+      <div class="info-icon">👩🏻‍💻</div>
+      <h3>ROLE</h3>
+      <span>UI Designer & Developer</span>
+    </div>
+
+    <div class="project-info-box">
+      <div class="info-icon">🛠️</div>
+      <h3>TOOLS</h3>
+      <span>Flutter, Firebase, Figma</span>
+    </div>
+
+    <div class="project-info-box">
+      <div class="info-icon">⏱️</div>
+      <h3>DURATION</h3>
+      <span>Graduation Project</span>
+    </div>
+  </div>
 </section>
 
 <section>
