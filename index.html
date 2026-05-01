@@ -565,6 +565,46 @@ textarea {
     width: 138px;
   }
 }
+  /* JOURNEY SECTION */
+.journey-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.journey-text {
+  flex: 1;
+}
+
+.journey-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #3A1F14;
+}
+
+.journey-text p {
+  max-width: 520px;
+  line-height: 1.9;
+  color: #5B3B2D;
+  margin-bottom: 15px;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 850px) {
+  .journey-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .journey-title {
+    font-size: 36px;
+  }
+
+  .polaroid-wrapper {
+    align-self: center;
+  }
+}
 </style>
 </head>
 
@@ -633,37 +673,49 @@ textarea {
     </div>
   </div>
 
-  <div class="polaroid-wrapper">
-    <div class="polaroid p1">
-      <img src="me1.jpeg" alt="Me 1">
-    </div>
-
-    <div class="polaroid p2">
-      <img src="me2.jpeg" alt="Me 2">
-    </div>
-  </div>
 </section>
 
-<section>
-  <h2 class="section-title">My Journey</h2>
-  <p class="section-subtitle">
-    Every late night, every challenge, every laugh, and every moment brought me here.
-  </p>
+<section class="journey-section">
 
-  <div class="cards">
-    <div class="card">
-      <h3>Memories</h3>
-      <p>Beautiful moments with friends, classmates, and the people who made this journey special.</p>
-    </div>
-    <div class="card">
-      <h3>Achievements</h3>
-      <p>A chapter filled with effort, growth, learning, and proud milestones.</p>
-    </div>
-    <div class="card">
-      <h3>Graduation Project</h3>
-      <p>A special part of my journey where creativity and technology came together.</p>
-    </div>
+  <div class="about-header">
+    <span class="about-number">02</span>
+    <span class="about-title">MY JOURNEY</span>
+    <span class="about-line"></span>
   </div>
+
+  <div class="journey-content">
+
+    <div class="journey-text">
+      <h2 class="journey-title">
+        The best memories are made together ♡
+      </h2>
+
+      <p>
+        Every late night, every challenge, every laugh, and every moment brought me here.
+      </p>
+
+      <p>
+        This journey wasn’t just about studying, it was about growing, discovering myself,
+        and creating memories that will stay with me forever.
+      </p>
+
+      <p>
+        I’m truly grateful for the people who became my second family and made this experience unforgettable.
+      </p>
+    </div>
+
+    <div class="polaroid-wrapper">
+      <div class="polaroid p1">
+        <img src="me1.jpeg">
+      </div>
+
+      <div class="polaroid p2">
+        <img src="me2.jpeg">
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
 <section>
