@@ -31,6 +31,7 @@ h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -78,6 +79,7 @@ h1, h2 {
   box-shadow: 0 25px 60px rgba(58, 31, 20, 0.25);
 }
 
+/* BUTTONS */
 .main-btn {
   margin-top: 28px;
   padding: 16px 28px;
@@ -112,6 +114,7 @@ h1, h2 {
   box-shadow: 0 15px 35px rgba(0, 110, 121, 0.35);
 }
 
+/* GENERAL SECTIONS */
 .section-title {
   font-size: 42px;
   margin-bottom: 16px;
@@ -142,23 +145,90 @@ h1, h2 {
   color: #006E79;
 }
 
-.message-card {
-  background: #FFF8EF;
-  padding: 24px;
-  border-radius: 24px;
-  box-shadow: 0 12px 35px rgba(58, 31, 20, 0.08);
-  border: 1px solid #EAD8C5;
+/* ABOUT SECTION */
+.about-section {
+  background: #F6EFE5;
 }
 
-.message-card h3 {
-  margin: 0 0 10px;
-  color: #006E79;
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
 }
 
-.message-card p {
-  margin: 0;
-  line-height: 1.7;
+.about-number {
+  background: #3A1F14;
+  color: #FFF8EF;
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.about-title {
+  letter-spacing: 4px;
+  font-size: 14px;
+  color: #6B4A3A;
+  font-weight: 600;
+}
+
+.about-line {
+  flex: 1;
+  height: 1px;
+  background: #D5BFA8;
+}
+
+.about-hello {
+  font-size: 56px;
+  margin: 0 0 24px;
+  color: #3A1F14;
+}
+
+.about-text p {
+  max-width: 620px;
+  line-height: 1.9;
   color: #5B3B2D;
+  margin-bottom: 18px;
+}
+
+.about-info-card {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #FFF8EF;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 12px 35px rgba(58, 31, 20, 0.08);
+  max-width: 760px;
+}
+
+.info-box {
+  text-align: center;
+  padding: 10px 16px;
+  border-right: 1px solid #E3D2C1;
+}
+
+.info-box:last-child {
+  border-right: none;
+}
+
+.info-icon {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.info-box h3 {
+  margin: 0;
+  color: #3A1F14;
+  font-size: 16px;
+}
+
+.info-box span {
+  display: block;
+  margin-top: 5px;
+  color: #8B5E3C;
+  font-size: 12px;
 }
 
 /* POLAROID STYLE */
@@ -167,7 +237,7 @@ h1, h2 {
   width: 100%;
   max-width: 360px;
   height: 300px;
-  margin: 40px auto 0;
+  margin: 45px auto 0;
 }
 
 .polaroid {
@@ -198,6 +268,23 @@ h1, h2 {
   right: 20px;
   transform: rotate(6deg);
   z-index: 2;
+}
+
+/* MESSAGES */
+.message-card {
+  background: #FFF8EF;
+  padding: 26px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(58, 31, 20, 0.08);
+  border: 1px solid #EAD8C5;
+}
+
+.message-card p {
+  margin: 0;
+  line-height: 1.8;
+  color: #5B3B2D;
+  font-size: 16px;
+  text-align: center;
 }
 
 /* POPUP */
@@ -355,6 +442,25 @@ textarea {
     font-size: 38px;
   }
 
+  .about-hello {
+    font-size: 42px;
+  }
+
+  .about-info-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .info-box {
+    border-right: none;
+    border-bottom: 1px solid #E3D2C1;
+    padding-bottom: 16px;
+  }
+
+  .info-box:last-child {
+    border-bottom: none;
+  }
+
   .floating-message-btn {
     right: 14px;
     bottom: 14px;
@@ -416,6 +522,19 @@ textarea {
     font-size: 15px;
   }
 
+  .about-header {
+    gap: 10px;
+  }
+
+  .about-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .about-hello {
+    font-size: 38px;
+  }
+
   .polaroid-wrapper {
     max-width: 300px;
     height: 255px;
@@ -469,12 +588,48 @@ textarea {
   </div>
 </section>
 
-<section>
-  <h2 class="section-title">About Me</h2>
-  <p class="section-subtitle">
-    I’m Rand Al-Omari, an Information Systems graduate with a passion for design,
-    technology, and creating meaningful digital experiences.
-  </p>
+<section class="about-section">
+  <div class="about-text">
+    <div class="about-header">
+      <span class="about-number">01</span>
+      <span class="about-title">ABOUT ME</span>
+      <span class="about-line"></span>
+    </div>
+
+    <h2 class="about-hello">Hello! ♡</h2>
+
+    <p>
+      I’m Rand, an Information Systems graduate with a passion for technology and design.
+    </p>
+
+    <p>
+      I love turning ideas into meaningful digital experiences that make life easier and more beautiful.
+    </p>
+
+    <p>
+      I’m a UI/UX enthusiast who believes in user-centered design, simplicity, and creativity.
+    </p>
+  </div>
+
+  <div class="about-info-card">
+    <div class="info-box">
+      <div class="info-icon">🎂</div>
+      <h3>22</h3>
+      <span>Age</span>
+    </div>
+
+    <div class="info-box">
+      <div class="info-icon">🎓</div>
+      <h3>Information Systems</h3>
+      <span>Major</span>
+    </div>
+
+    <div class="info-box">
+      <div class="info-icon">♡</div>
+      <h3>Design, Coffee & Travel</h3>
+      <span>Interests</span>
+    </div>
+  </div>
 
   <div class="polaroid-wrapper">
     <div class="polaroid p1">
@@ -592,7 +747,6 @@ textarea {
     if (snapshot.empty) {
       messagesContainer.innerHTML = `
         <div class="message-card">
-          <h3>No messages yet</h3>
           <p>Be the first to write a sweet graduation message 🤍</p>
         </div>
       `;
@@ -606,7 +760,6 @@ textarea {
       card.className = "message-card";
 
       card.innerHTML = `
-        <h3>${data.name || "Guest"}</h3>
         <p>${data.message || ""}</p>
       `;
 
