@@ -8,9 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -19,29 +17,24 @@ body {
   color: #3A1F14;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 section {
-  padding: 80px 8%;
+  padding: 70px 8%;
 }
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
   background: linear-gradient(135deg, #F6EFE5, #E8D4BE);
 }
 
-.hero-text {
-  flex: 1;
-}
+.hero-text { flex: 1; }
 
 .hero-text .small {
   letter-spacing: 4px;
@@ -51,252 +44,126 @@ h1, h2 {
 }
 
 .hero-text h1 {
-  font-size: 64px;
-  line-height: 1;
-  margin: 18px 0;
+  font-size: 58px;
+  margin: 15px 0;
 }
 
 .hero-text p {
-  font-size: 17px;
-  line-height: 1.8;
-  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 450px;
 }
 
+/* IMAGE FIX */
 .hero-img {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .hero-img img {
-  display: block;
   width: 100%;
-  max-width: 430px;
+  max-width: 400px;
   height: auto;
-  border-radius: 28px;
+  border-radius: 26px;
   box-shadow: 0 25px 60px rgba(58, 31, 20, 0.25);
 }
 
+/* BUTTON */
 .main-btn {
-  margin-top: 28px;
-  padding: 16px 28px;
-  border: none;
+  margin-top: 25px;
+  padding: 14px 26px;
   border-radius: 50px;
   background: #3A1F14;
   color: #FFF8EF;
-  font-size: 15px;
-  font-weight: 600;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 12px 30px rgba(58, 31, 20, 0.25);
-  transition: 0.3s ease;
-}
-
-.main-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  background: #006E79;
 }
 
 .floating-message-btn {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  right: 18px;
+  bottom: 18px;
   z-index: 50;
-  padding: 14px 22px;
-  border: none;
+  padding: 12px 20px;
   border-radius: 50px;
   background: #006E79;
   color: white;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 15px 35px rgba(0, 110, 121, 0.35);
+  border: none;
 }
 
+/* TEXT */
 .section-title {
-  font-size: 42px;
-  margin-bottom: 16px;
+  font-size: 38px;
 }
 
 .section-subtitle {
-  max-width: 650px;
-  line-height: 1.8;
-  color: #6B4A3A;
-}
-
-.cards {
-  margin-top: 35px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.card {
-  background: #FFF8EF;
-  padding: 28px;
-  border-radius: 24px;
-  box-shadow: 0 12px 35px rgba(58, 31, 20, 0.08);
-}
-
-.card h3 {
-  margin-top: 0;
-  color: #006E79;
-}
-
-.message-card {
-  background: #FFF8EF;
-  padding: 24px;
-  border-radius: 24px;
-  box-shadow: 0 12px 35px rgba(58, 31, 20, 0.08);
-  border: 1px solid #EAD8C5;
-}
-
-.message-card h3 {
-  margin: 0 0 10px;
-  color: #006E79;
-}
-
-.message-card p {
-  margin: 0;
+  max-width: 600px;
   line-height: 1.7;
-  color: #5B3B2D;
 }
 
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(58, 31, 20, 0.45);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  padding: 20px;
-}
-
-.popup-overlay.active {
-  display: flex;
-}
-
-.popup {
-  width: 100%;
-  max-width: 480px;
-  background: #FFF8EF;
-  border-radius: 28px;
-  padding: 32px;
+/* POLAROID */
+.polaroid-wrapper {
   position: relative;
-  box-shadow: 0 25px 70px rgba(58, 31, 20, 0.35);
-  animation: pop 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  height: 240px;
+  margin: 30px auto;
 }
 
-@keyframes pop {
-  from {
-    transform: scale(0.92);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.close-btn {
+.polaroid {
   position: absolute;
-  top: 18px;
-  right: 20px;
-  border: none;
-  background: transparent;
-  font-size: 28px;
-  cursor: pointer;
-  color: #3A1F14;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 160px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.popup h2 {
-  font-size: 34px;
-  margin: 0 0 10px;
-}
-
-.popup p {
-  color: #6B4A3A;
-  line-height: 1.6;
-  margin-bottom: 22px;
-}
-
-.form-group {
-  margin-bottom: 16px;
-}
-
-input, textarea {
+.polaroid img {
   width: 100%;
-  border: 1px solid #E0C9B2;
-  background: #F6EFE5;
-  border-radius: 16px;
-  padding: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  outline: none;
-  color: #3A1F14;
+  border-radius: 6px;
 }
 
-textarea {
-  height: 130px;
-  resize: none;
+.p1 {
+  top: 0;
+  left: 0;
+  transform: rotate(-5deg);
 }
 
-.send-btn {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  border-radius: 50px;
-  background: #3A1F14;
-  color: #FFF8EF;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+.p2 {
+  bottom: 0;
+  right: 0;
+  transform: rotate(5deg);
 }
 
-.send-btn:hover {
-  background: #006E79;
-}
+/* MOBILE */
+@media (max-width: 700px) {
 
-.send-btn:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
-}
-
-.success-message {
-  display: none;
-  margin-top: 14px;
-  padding: 13px;
-  border-radius: 16px;
-  background: #E8F3EF;
-  color: #006E79;
-  font-size: 14px;
-  text-align: center;
-  font-weight: 600;
-}
-
-@media (max-width: 850px) {
   .hero {
     flex-direction: column;
     text-align: center;
-    gap: 35px;
-    padding-top: 50px;
   }
 
-  .hero-img {
-    width: 100%;
+  .hero-text h1 {
+    font-size: 40px;
   }
 
   .hero-img img {
-    width: 100%;
-    max-width: 90%;
+    max-width: 85%;
+  }
+
+  .polaroid-wrapper {
+    display: flex;
+    flex-direction: column;
     height: auto;
-    border-radius: 24px;
+    gap: 15px;
   }
-}
 
-@media (max-width: 430px) {
-  .hero-img img {
-    max-width: 95%;
+  .polaroid {
+    position: static;
+    width: 85%;
+    transform: none;
   }
 }
 </style>
@@ -304,218 +171,47 @@ textarea {
 
 <body>
 
-<button class="floating-message-btn" onclick="openPopup()">Write a Message ✨</button>
+<button class="floating-message-btn">Write a Message ✨</button>
 
 <section class="hero">
   <div class="hero-text">
     <div class="small">Class of 2026</div>
-    <h1>Rand’s Graduation Book</h1>
+    <h1>Ranod’s Graduation Book</h1>
     <p>
-      A digital memory book filled with dreams, dedication, beautiful memories,
-      and a journey that will always be remembered.
+      A digital memory book filled with dreams, dedication, beautiful memories.
     </p>
-    <button class="main-btn" onclick="openPopup()">Write a Graduation Message 🤍</button>
+    <button class="main-btn">Write a Graduation Message 🤍</button>
   </div>
 
   <div class="hero-img">
-    <img src="graduation.jpg" alt="Graduation Photo">
+    <img src="graduation.jpg">
   </div>
 </section>
 
 <section>
   <h2 class="section-title">About Me</h2>
   <p class="section-subtitle">
-    I’m Rand Al-Omari, an Information Systems graduate with a passion for design,
-    technology, and creating meaningful digital experiences.
-  </p>
-</section>
-
-<section>
-  <h2 class="section-title">My Journey</h2>
-  <p class="section-subtitle">
-    Every late night, every challenge, every laugh, and every moment brought me here.
+    I’m Ranod, an Information Systems graduate with a passion for design.
   </p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Memories</h3>
-      <p>Beautiful moments with friends, classmates, and the people who made this journey special.</p>
+  <!-- الصور -->
+  <div class="polaroid-wrapper">
+    <div class="polaroid p1">
+      <img src="me1.jpeg">
     </div>
-    <div class="card">
-      <h3>Achievements</h3>
-      <p>A chapter filled with effort, growth, learning, and proud milestones.</p>
-    </div>
-    <div class="card">
-      <h3>Graduation Project</h3>
-      <p>A special part of my journey where creativity and technology came together.</p>
+
+    <div class="polaroid p2">
+      <img src="me2.jpeg">
     </div>
   </div>
-</section>
-
-<section>
-  <h2 class="section-title">Sweet Messages 🤍</h2>
-  <p class="section-subtitle">
-    Beautiful words from the people who made this graduation moment even more special.
-  </p>
-
-  <div id="messagesContainer" class="cards"></div>
 </section>
 
 <section>
   <h2 class="section-title">Thank You</h2>
   <p class="section-subtitle">
-    This is not the end, it’s the beginning of everything I dreamed of.
+    This is just the beginning 🤍
   </p>
 </section>
-
-<div class="popup-overlay" id="popup">
-  <div class="popup">
-    <button class="close-btn" onclick="closePopup()">×</button>
-
-    <h2>Leave a Sweet Message</h2>
-    <p>Your words will make this graduation moment even more special 🤍</p>
-
-    <form id="messageForm">
-      <div class="form-group">
-        <input id="nameInput" type="text" placeholder="Your Name" required>
-      </div>
-
-      <div class="form-group">
-        <textarea id="messageInput" placeholder="Write your graduation message..." required></textarea>
-      </div>
-
-      <button class="send-btn" id="sendBtn" type="submit">Send My Congratulations ✨</button>
-      <div class="success-message" id="successMessage">Your message was sent successfully 🤍</div>
-    </form>
-  </div>
-</div>
-
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import {
-    getFirestore,
-    collection,
-    addDoc,
-    serverTimestamp,
-    getDocs,
-    query,
-    orderBy
-  } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDI8ThJ8ClaZEU9wRTZ2GkIovuSCk9OGY",
-    authDomain: "graduation-site-8e68f.firebaseapp.com",
-    projectId: "graduation-site-8e68f",
-    storageBucket: "graduation-site-8e68f.firebasestorage.app",
-    messagingSenderId: "322858141115",
-    appId: "1:322858141115:web:8cae7ae3985b367a3b09e",
-    measurementId: "G-1KN3B3YF4M"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  const form = document.getElementById("messageForm");
-  const nameInput = document.getElementById("nameInput");
-  const messageInput = document.getElementById("messageInput");
-  const sendBtn = document.getElementById("sendBtn");
-  const successMessage = document.getElementById("successMessage");
-  const messagesContainer = document.getElementById("messagesContainer");
-
-  async function loadMessages() {
-    messagesContainer.innerHTML = "";
-
-    const q = query(
-      collection(db, "graduationMessages"),
-      orderBy("createdAt", "desc")
-    );
-
-    const snapshot = await getDocs(q);
-
-    if (snapshot.empty) {
-      messagesContainer.innerHTML = `
-        <div class="message-card">
-          <h3>No messages yet</h3>
-          <p>Be the first to write a sweet graduation message 🤍</p>
-        </div>
-      `;
-      return;
-    }
-
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-
-      const card = document.createElement("div");
-      card.className = "message-card";
-
-      card.innerHTML = `
-        <h3>${data.name || "Guest"}</h3>
-        <p>${data.message || ""}</p>
-      `;
-
-      messagesContainer.appendChild(card);
-    });
-  }
-
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const name = nameInput.value.trim();
-    const message = messageInput.value.trim();
-
-    if (!name || !message) {
-      alert("Please write your name and message 🤍");
-      return;
-    }
-
-    try {
-      sendBtn.disabled = true;
-      sendBtn.textContent = "Sending...";
-
-      await addDoc(collection(db, "graduationMessages"), {
-        name: name,
-        message: message,
-        createdAt: serverTimestamp()
-      });
-
-      form.reset();
-      successMessage.style.display = "block";
-      sendBtn.textContent = "Send My Congratulations ✨";
-
-      await loadMessages();
-
-      setTimeout(() => {
-        successMessage.style.display = "none";
-        closePopup();
-      }, 1800);
-
-    } catch (error) {
-      console.error("Error sending message: ", error);
-      alert("Sorry, the message was not sent. Please try again.");
-      sendBtn.textContent = "Send My Congratulations ✨";
-    } finally {
-      sendBtn.disabled = false;
-    }
-  });
-
-  loadMessages();
-</script>
-
-<script>
-function openPopup() {
-  document.getElementById("popup").classList.add("active");
-}
-
-function closePopup() {
-  document.getElementById("popup").classList.remove("active");
-}
-
-document.getElementById("popup").addEventListener("click", function(e) {
-  if (e.target === this) {
-    closePopup();
-  }
-});
-</script>
 
 </body>
 </html>
